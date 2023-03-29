@@ -11,7 +11,7 @@ on:
       - main
 
 env:
-  DBT_PROFILES_DIR: cd /home/runner/work/dbt_airflow/dbt_airflow/dockerairflow/dbt_project
+  DBT_PROFILES_DIR: cd dbt_airflow/dbt_airflow/dockerairflow/dbt_project/dbt_project.yml
 
   
   
