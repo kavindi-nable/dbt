@@ -11,7 +11,7 @@ on:
       - main
 
 env:
-  DBT_PROFILES_DIR: ./dbt_project.yml
+  DBT_PROFILES_DIR: ./
 
   
   
