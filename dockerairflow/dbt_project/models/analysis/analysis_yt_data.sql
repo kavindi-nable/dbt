@@ -2,11 +2,10 @@
 
 SELECT
     GENRE,
-    COUNT(ID) as total,
-    MAX(ID) as maximum,
-    MIN(ID) as minimum, 
-    AVG(ID) as average,
-    STDDEV(ID) as standardDeviation
+    COUNT(A) as total,
+    MAX(A) as maximum,
+    MIN(A) as minimum, 
+    AVG(A) as average
     
 FROM YT
 GROUP BY GENRE
