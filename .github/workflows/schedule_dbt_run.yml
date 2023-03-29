@@ -50,8 +50,10 @@ jobs:
         run: |
           pwd
           ls
-          cd dockerairflow/dbt_project/
-          dbt seed
+          cd dockerairflow/dbt_project/models
+          pwd
+          ls
+          dbt run
 
       - name: Test dbt models
         run: dbt test
