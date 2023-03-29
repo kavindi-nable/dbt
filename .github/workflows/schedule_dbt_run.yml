@@ -35,6 +35,7 @@ jobs:
       - name: Install dependencies
         run: | 
           pwd
+          ls
           pip install dbt-snowflake
           dbt deps
 
