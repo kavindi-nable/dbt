@@ -32,7 +32,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pwd
+          cd /dockerairflow/dbt_project
           pip install dbt-snowflake
           dbt deps
 
