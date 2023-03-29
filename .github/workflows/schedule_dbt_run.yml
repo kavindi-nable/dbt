@@ -11,7 +11,7 @@ on:
       - main
 
 env:
-  DBT_PROFILES_DIR: cd ../dockerairflow/dbt_project
+  DBT_PROFILES_DIR: cd /
   
   DBT_SNOWFLAKE_USERNAME: ${{ secrets.DBT_SNOWFLAKE_USERNAME }}
   DBT_SNOWFLAKE_PW: ${{ secrets.DBT_SNOWFLAKE_PW }}
