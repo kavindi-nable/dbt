@@ -56,4 +56,8 @@ jobs:
           dbt run
 
       - name: Test dbt models
-        run: dbt test
+        run: |
+          pwd
+          ls
+          cd dockerairflow/dbt_project/
+          dbt test
