@@ -37,6 +37,8 @@ jobs:
         run: | 
           pwd
           ls
+          cd dockerairflow
+          pwd
           pip install dbt-snowflake
           dbt deps
 
