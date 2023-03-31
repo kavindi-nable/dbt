@@ -1,0 +1,63 @@
+name: schedule_dbt_run
+
+on:
+  schedule:
+    # run at 7AM every single day
+    # https://crontab.guru <-- for generating CRON expression
+    - cron: "0 7 * * *"
+  push:
+    branches:
+      # run on push to development branch
+      - km/feature/deploymentpipeline
+
+env:
+  DBT_PROFILES_DIR: ./
+
+  
+  
+  
+  DBT_SNOWFLAKE_USERNAME: ${{ secrets.DBT_SNOWFLAKE_USERNAME }}
+  DBT_SNOWFLAKE_PW: ${{ secrets.DBT_SNOWFLAKE_PW }}
+  DBT_SNOWFLAKE_ROLE: ${{ secrets.DBT_SNOWFLAKE_ROLE }}
+
+jobs:
+  schedule_dbt_run:
+    name: schedule_dbt_run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.7.x"
+
+      - name: Install dependencies
+        run: | 
+          pwd
+          ls
+          cd dockerairflow
+          pwd
+          cd dbt_project/
+          pwd
+          ls
+          pip install dbt-snowflake
+          dbt deps --target prod
+
+      # dbt related commands here - run use --target prod/dev to run for specific environments
+      - name: Run dbt models
+        run: |
+          pwd
+          ls
+          cd dockerairflow/dbt_project/
+          pwd
+          ls
+          dbt run --target prod
+
+      - name: Test dbt models
+        run: |
+          pwd
+          ls
+          cd dockerairflow/dbt_project/
+          dbt test --target prod
