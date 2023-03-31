@@ -11,7 +11,7 @@ dbt_project:
       user: KavindiMudunkotuwa
       warehouse: COMPUTE_WH
     
-    Prod:
+    prod:
       account: ykzjwal-ar56104
       database: ANALYTICS
       password: Kaviandlilo94
