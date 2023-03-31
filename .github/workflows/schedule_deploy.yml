@@ -8,7 +8,7 @@ on:
   push:
     branches:
       # run on push to development branch
-      - main
+      - km/feature/deploymentpipeline
 
 env:
   DBT_PROFILES_DIR: ./
