@@ -10,8 +10,8 @@ dbt_project:
       type: snowflake
       user: KavindiMudunkotuwa
       warehouse: COMPUTE_WH
-      
-     Prod:
+    
+    Prod:
       account: ykzjwal-ar56104
       database: ANALYTICS
       password: Kaviandlilo94
@@ -21,7 +21,8 @@ dbt_project:
       type: snowflake
       user: KavindiMudunkotuwa
       warehouse: COMPUTE_WH
-      
-      
+    
+    
+          
   target: dev
 
