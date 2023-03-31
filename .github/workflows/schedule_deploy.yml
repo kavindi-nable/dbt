@@ -22,7 +22,7 @@ env:
 
 jobs:
   schedule_dbt_run:
-    name: schedule_dbt_run
+    name: schedule_deploy
     runs-on: ubuntu-latest
 
     steps:
