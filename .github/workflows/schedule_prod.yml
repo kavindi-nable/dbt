@@ -4,7 +4,7 @@ on:
   schedule:
     # run at 7AM every single day
     # https://crontab.guru <-- for generating CRON expression
-    - cron: "0 7 * * *"
+    #cron: "0 7 * * *"
   push:
     branches:
       # run on push to development branch
