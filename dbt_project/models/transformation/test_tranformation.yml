@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: yt_model
+    description: "test transformation"
+    columns:
+      - name: GENRE
+        description: "test genre count of videos in the genre"
+        tests:
+          - unique
+          - not_null
+          
+      - name: total
+        tests:
+          - not_null
+        
