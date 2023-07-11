@@ -190,7 +190,7 @@ This command starts a local web server to host the documentation. You can access
 
 ###### Generated lineage graph
 
-![lineage graph!](graph.PNG)
+![Lineage graph](Graph-1.png)
 
  Refer the [dbt commands](https://docs.getdbt.com/reference/dbt-commands) for more details.
 

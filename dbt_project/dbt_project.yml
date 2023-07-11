@@ -31,6 +31,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+seeds:
+  dbt_project:
+    +schema: source
+    yt:
+      +column_types:
+        Subscriber_Count: varchar(32)
+        Video_Views: varchar(32)
+        Video_Count: varchar(32)
 models:
   dbt_project:
     # Config indicated by + and applies to all files under models/example/

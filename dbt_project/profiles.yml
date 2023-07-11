@@ -1,28 +1,43 @@
-dbt_project:
-  outputs:
-    dev:
-      account: ykzjwal-ar56104
-      database: ANALYTICS
-      password: Kaviandlilo94
-      role: ACCOUNTADMIN
-      schema: PUBLIC
-      threads: 10
-      type: snowflake
-      user: KavindiMudunkotuwa
-      warehouse: COMPUTE_WH
+# dbt_project:
+#   outputs:
+#     dev:
+#       account: ykzjwal-ar56104
+#       database: ANALYTICS
+#       password: Kaviandlilo94
+#       role: ACCOUNTADMIN
+#       schema: PUBLIC
+#       threads: 10
+#       type: snowflake
+#       user: KavindiMudunkotuwa
+#       warehouse: COMPUTE_WH
     
-    prod:
-      account: ykzjwal-ar56104
-      database: ANALYTICS
-      password: Kaviandlilo94
-      role: ACCOUNTADMIN
-      schema: PUBLIC
-      threads: 10
-      type: snowflake
-      user: KavindiMudunkotuwa
-      warehouse: COMPUTE_WH
-    
-    
-          
-  target: dev
+#     prod:
+#       account: ykzjwal-ar56104
+#       database: ANALYTICS
+#       password: Kaviandlilo94
+#       role: ACCOUNTADMIN
+#       schema: PUBLIC
+#       threads: 10
+#       type: snowflake
+#       user: KavindiMudunkotuwa
+#       warehouse: COMPUTE_WH
+              
+#   target: dev
 
+dbt_project:
+
+  outputs:
+
+    dev:
+
+      type: postgres
+      threads: 10
+      host: 192.168.85.193
+      port: 5432
+      user: banking_demo_user
+      pass: p#ssw0rd
+      dbname: banking_demo_db
+      schema: youtube_demo_schema
+
+
+  target: dev
